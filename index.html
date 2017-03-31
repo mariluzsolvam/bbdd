@@ -58,7 +58,13 @@
       se mostrará el index.php que muestra el contenido de la tabla detalles.</p>
             
       <iframe width="560" height="315" src="https://www.youtube.com/embed/yDzGuesq4I4" frameborder="0" allowfullscreen></iframe>
+      <p>Ahora, vamos a modificar el HTML con los enlaces de forma que se pase una variable con un valor a index.php</p>
+      <p>En index.php, recogemos el valor de dicha variable y modificamos la SQL para que se muestre el registro cuyo código
+      sea igual al valor de la variable que paso por la URL.</p>
+      <p>Por ejemplo, la URL es index.php?foto=1 (porque he pulsado en "foto1". La variable de la URL es foto y su valor es 1.<br>
+      Ahora la SQL sería "SELECT * FROM detalles WHERE codigo=1" </p>
       
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/afz9rpXjcCc" frameborder="0" allowfullscreen></iframe>
       
       <footer class="site-footer">
         <span class="site-footer-owner"><a href="https://github.com/mariluzsolvam/bbdd">Base de Datos</a> is maintained by <a href="https://github.com/mariluzsolvam">mariluzsolvam</a>.</span>
