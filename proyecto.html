@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>Base de Datos by mariluzsolvam</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+  </head>
+  <body>
+    <section class="page-header">
+      <h1 class="project-name">Base de Datos</h1>
+    </section>
+
+    <section class="main-content">
+      <h1>
+<a id="bienvenidos-a-la-asignatura-base-datos" class="anchor" href="#bienvenidos-a-la-asignatura-base-datos" aria-hidden="true">
+  <span aria-hidden="true" class="octicon octicon-link"></span></a>Bienvenidos a la asignatura Base de Datos</h1>
+<!-- INTRO BBDD
+<p>En esta página encontrarás vídeos y otros recursos para utilizar en la asignatura.<br>
+<h3>Base de Datos de 1 a N</h3>
+<p>Creación de una base de datos de uno a muchos entre dos entidades.</p>
+ <iframe width="560" height="315" src="https://www.youtube.com/embed/Lnl69QH4JaM" frameborder="0" allowfullscreen></iframe>
+ <iframe width="560" height="315" src="https://www.youtube.com/embed/Q9rms9uA5a4" frameborder="0" allowfullscreen></iframe>
+ <h3>Base de Datos de N a N</h3>
+<p>Creación de una base de datos de muchos a muchos entre dos entidades.</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/zLe3zdiPd3U" frameborder="0" allowfullscreen></iframe>
+ <iframe width="560" height="315" src="https://www.youtube.com/embed/sHCQutQZsMo" frameborder="0" allowfullscreen></iframe>
+  -->    
+  <h3>PROYECTO SOLVAM</h3>
+<p>Crear conexión php.</p>
+<p>Abre un editor HTML, por ejemplo Brackets, Geany...</p>
+  <p>Escribe el siguiente código php y guárdalo como conexion.php. Después, súbelo al servidor a public_html>proyecto_solvam>php:</p>  
+
+ <iframe width="560" height="315" src="https://www.youtube.com/embed/i0dXCm47IrM" frameborder="0" allowfullscreen></iframe>
+      <p>Comprobar conexión php:</p>  <p>Si sale la página en blando está todo correcto.</p>
+     
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/19hsY3BiRDs" frameborder="0" allowfullscreen></iframe>
+
+       <h3>index.php</h3>
+      <p>Creamos un archivo index.php para mostrar los datos de una tabla. Primero, incluimos la conexión y ejecutamos la sentencia:</p>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/yopj0MMT458" frameborder="0" allowfullscreen></iframe>
+      <p>A continuación, hacemos un bucle sobre un array que almacena el resultado de la consulta SQL anterior:</p>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/Tbf1w5PkmCw" frameborder="0" allowfullscreen></iframe>
+      
+      <p>En este paso, se comprueba que los datos se ven en un navegador. Como no hay HTML ni CSS se visualiza sin formato ni estilo</p>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/oCDtMABxtwg" frameborder="0" allowfullscreen></iframe>
+      <p>Ahora, añadimos la etiqueta img de HTML para visualizar los datos con su imagen. Fíjate que en mi vídeo, mi imagen se almacena en $fila[9] y este dato puede cambiar en tu base de datos.
+      También, fíjate que el nombre de la imagen y extensión en la base de datos debe ser exactamente el mismo que el que hay en la
+      carpeta img>detalles del servidor.</p>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/WCfllizvLM4" frameborder="0" allowfullscreen></iframe>
+  
+      <h3>Simulación de una galería de imágenes</h3>
+      <p>Vamos a crear un archivo HTML que tenga 8 enlaces (foto1, foto2, foto3...) que simularán 8 imágenes. Al hacer clic en estos enlaces,
+      se mostrará el index.php que muestra el contenido de la tabla detalles.</p>
+            
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/yDzGuesq4I4" frameborder="0" allowfullscreen></iframe>
+      <p>Ahora, vamos a modificar el HTML con los enlaces de forma que se pase una variable con un valor a index.php</p>
+      <p>En index.php, recogemos el valor de dicha variable y modificamos la SQL para que se muestre el registro cuyo código
+      sea igual al valor de la variable que paso por la URL.</p>
+      <p>Por ejemplo, la URL es index.php?foto=1 (porque he pulsado en "foto1". La variable de la URL es foto y su valor es 1.<br>
+      Ahora la SQL sería "SELECT * FROM detalles WHERE codigo=1" </p>
+      
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/afz9rpXjcCc" frameborder="0" allowfullscreen></iframe>
+      
+      <h3>Modificar detalles.html por detalles.php</h3>
+      <p>Vamos a empezar a integrar el código PHP con HTML. Para ello, vamos a hacer una copia del archivo detalles.html del servidor y renombraremos la copia a detalles.php</p>
+      <p>Ahora, sube detalles.php a la carpeta PHP del servidor. A partir de ahora, vas a trabajar con detalles.php y con el archivo index.php (que es donde tenemos los detalles)</p>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/pi6wSzPoC0A" frameborder="0" allowfullscreen></iframe>
+      <p>Fíjate que hay que cambiar todas las rutas de href y src para que apunten a la carpeta correspondiente.</p>
+      
+      <p>A continuación, modificamos el archivo simulacion_galeria.html para que los enlaces apunten al archivo detalles.php en vez de a index.php</p>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/eSOXaWQvMEc" frameborder="0" allowfullscreen></iframe>
+      
+      <p>Por último, ponemos el while y las variables $fila[1], $fila[2] ... donde corresponda.</p>
+      <p>NOTA: la función utf8_encode sirva para codificar el texto y así que aparezcan los acentos correctamente, por ejemplo echo utf8_encode($fila['2'])</p>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/j2xqV0JKsw4" frameborder="0" allowfullscreen></iframe>
+      <p>Cuando una página te sale en blanco, puedes insertar estas líneas PHP en el script para que se muestre el error:</p>
+      <p>error_reporting(E_ALL);</p>
+      <p>init_set("display_errors",1);</p>
+      <p>Acuérdate de poner estas 2 lineas entre etiquetas php</p>
+      <h3>TABLAS ARTÍCULOS Y CATEGORÍAS</h3>
+      <p>Vamos a crear las tablas artículos y categorías para la parte del Blog. Abre phpmyadmin y crea la tabla "categorias" con los siguientes campos: </p>
+      <li>id_categoria: integer auto_increment</li>
+      <li>categoria: varchar(30) - utf8_general_ci</li>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/jH0sc4ShH1o" frameborder="0" allowfullscreen></iframe>
+      <p>En la tabla artículos necesitamos los siguientes campos:</p>
+      <li>id_articulo: integer auto_increment</li>
+      <li>titulo: varchar(30) utf8_general_ci</li>
+      <li>articulo: text utf8_general_ci</li>
+      <li>autor: varchar(20) utf8_general_ci</li>
+      <li>fecha: date</li>
+      <li>etiquetas: varchar(255) utf8_general_ci</li>
+      <li>categoria: integer - <strong>index</strong> porque es la clave ajena a la tabla categorias y <strong>null</strong> marcáis esta casilla porque la restricción de integridad de la clave ajena será Delete:not null y Update:Cascade.</li>
+      <li>foto: varchar(100) utf8_general_ci</li>
+      <p>Mira todo el vídeo antes de empezar porque hay varios cambios durante la creación de la relación con categoras.</p>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/_zYk7OFdABw" frameborder="0" allowfullscreen></iframe>
+      <h3>Rellenar tablas</h3>
+      <p>Empieza a rellenar las dos tablas. Primero tendrás que rellenar la tabla categorías para que no te de error el campo "categoria" de la tabla artículos.</p>
+      <p>Crea una carpeta en filezilla, dentro de "img" que se llame "Blog". Ves poniendo ahí las fotos de cada artículo.</p>
+      <h3>BLOG</h3>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/waUE5dwvwcA" frameborder="0" allowfullscreen></iframe>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/NOMzQbTMiVI" frameborder="0" allowfullscreen></iframe>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/d9bqoWM0UEM" frameborder="0" allowfullscreen></iframe>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/CmAY6eMcQI4" frameborder="0" allowfullscreen></iframe>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/_OLJtWcRjNM" frameborder="0" allowfullscreen></iframe>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/OH4p3W7m8D8" frameborder="0" allowfullscreen></iframe>
+      <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/mariluzsolvam/bbdd">Base de Datos</a> is maintained by <a href="https://github.com/mariluzsolvam">mariluzsolvam</a>.</span>
+
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
+      </footer>
+
+    </section>
+
+  
+  </body>
+</html>
