@@ -31,15 +31,24 @@
       
 </section>
 <center><h2>BD Galeria de Pintura en SQL</h2></center>
-    <h3></h3>
-    <p></p>
-    <p>Tablas: Artista, cliente y exposición</p>
+      <p>Las Bases de datos las podéis hacer en local o en remoto:</p>
+        <ul>
+          <li>LOCAL: ves a Menú > phpmyadmin y escribe usuario:root y contraseña: bbdd</li>
+          <li>REMOTO: entra en tudominio.com:10000 y en el panel de control, en "Edit Databases", crea la Base de datos
+            y después ves a http://www.solvam.net/phpmyadmin para empezar a crear las tablas.</li>
+      </ul>
+    <p>Para empezar a hacer una BD en SQL, hay que observar en el modelo E/R las entidades que no tienen claves ajenas.</p>
+    <p>En la Galería de pintura, podéis ver que las tablas Artista, Cliente y Exposición no tienen claves ajenas, por lo
+      tanto serán las primeras tablas que hagamos en SQL.</p>
+    <h3>Crear la BD y las tablas: Artista, cliente y exposición</h3>
   <iframe width="560" height="315" src="https://www.youtube.com/embed/fw_q-l9gaZM" frameborder="0" allowfullscreen></iframe>
    
-      <p>Tabla Pintura</p>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/bH3AoldZdmA" frameborder="0" allowfullscreen></iframe>
+      <h3>Tabla Pintura: Primera tabla con Clave ajena</h3>
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/bH3AoldZdmA" frameborder="0" allowfullscreen></iframe>
        
-      <p>Tabla Expone y herramienta "Diseñador"</p>
+      <h3>Tabla Expone y herramienta "Diseñador"</h3>
+      <p>Por último, acuérdate que si hay relaciones de N:N estas se convierten en tablas.</p>
+      <p>En nuestro caso, la relación Expone es la única de N:N</p>
       <iframe width="560" height="315" src="https://www.youtube.com/embed/I9CHm4RLWdk" frameborder="0" allowfullscreen></iframe>
       <footer class="site-footer">
         <span class="site-footer-owner"><a href="https://github.com/mariluzsolvam/bbdd">Base de Datos</a> is maintained by <a href="https://github.com/mariluzsolvam">mariluzsolvam</a>.</span>
