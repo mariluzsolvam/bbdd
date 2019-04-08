@@ -53,9 +53,20 @@
     <h3>index.php y menu.php</h3>
     <p>Ahora vamos a crear un index.php y un menu.php que aparecza en cada página de las que hemos creado anteriormente:</p>
     <iframe width="560" height="315" src="https://www.youtube.com/embed/AcVbY6CbbGs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    <h3>Eliminar un registro de la tabla. PRIMRA PARTE</h3>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/69ADMp31YQU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    
+    <h3>Eliminar un registro de la tabla. PRIMERA PARTE</h3>
+    <p>Creamos en tipos.php dos columnas más Editar y Eliminar fuera del bucle.</p>
+    <p>Dentro del bucle, creamos dos celdas más "Editar" y "Eliminar" que nos lleven respectivamente a editar_tipo.php y eliminar_tipo.php</p>
+    <p>La url de ambas opciones debe llevar una variable con el valor de la clave primaria de dicho registro.</p>
+    <p>Cuando cliques en el enlace de "Eliminar" fíjate que en la URL haya pasado una variable (codigo) con un valor.</p>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/69ADMp31YQU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <h3>Eliminar un registro de la tabla. SEGUNDA PARTE</h3>
+    <p>Inserta dos o tres registros de prueba en la tabla tipos. Esto lo hacemos para no eliminar datos que necesitamos y que están relacionado con la tabla modelos y no se van a poder eliminar por estar la restricción de la clave ajena en RESTRICT.</p>
+    <p>Crea el archivo eliminr_tipos.php. Realiza las siguientes acciones:</p>
+    <ol>Incluye la conexión.</ol>
+    <ol>Recoge la variable que pasa por URL con $_GET</ol>
+    <ol>Ejecuta la query DELETE FROM tipos WHERE codigo='$codigo_tipo' ATENCIÓN: codigo en la query es el nombre del campo de la tabla tipos.</ol>
+    <ol>Haz una redirección a tipos.php</ol>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/cFH7m38pUMU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     <footer class="site-footer">
         <span class="site-footer-owner"><a href="https://github.com/mariluzsolvam/bbdd">Base de Datos</a> is maintained by <a href="https://github.com/mariluzsolvam">mariluzsolvam</a>.</span>
 
