@@ -87,7 +87,22 @@
     <p>Vamos a insertar un registro en la tabla modelos. Esta tabla tiene el campo codigo_tipo que hace referencia a un código de la tabla tipos.</p>
     <p>en el formulario de inserción, cambiaremos el cuadro de texto de codigo_tipo por un select con opciones.</p>
     <p>Después del select, haremos una SQL para seleccionar todos los códigos de la tabla tipos y en el bucle que recorre esa consulta, pondremos la etiqueta <i>option</i> del select, así saldrán tantas opciones como códigos haya en la tabla tipos.</p>
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/qvVV9_id_QU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+   <iframe width="560" height="315" src="https://www.youtube.com/embed/qvVV9_id_QU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    
+   <h3>Editar un registro</h3>
+   <p>Para editar un registro hay que realizar es siguiente procedimiento:</p>
+    <p>En el archivo donde se muestran los registro de una tabla con su enlace <i>Editar</i>, por ejemplo en tipos.php
+    se tiene que modificar o crear el hipervínculo para que al pulsar <i>Editar</i> te lleve a editar_tipo.php el codigo (clave primaria) como variable por URL (igual en el enlace de eliminar_tipo.php) </p>
+    <p>En editar_tipo.php</p>
+      <ul>Se incluye la conexión con la función include.
+      </ul>
+      <ul>Se ejecuta el método query con la consulta SQL para mostrar el tipo cuyo codigo sea el que pasas por URL
+      </ul>
+      <ul>Se recorren los resultados de la consulta con un while para mostrar cada campo de ese registro (solo el campo tipo, las claves primarias no se deberían poder modificar).
+      </ul>
+    <ul>Despues del bucle, se crea en html un formulario con los campos tipo y el botón submit. El campo tipo ha de tener name y value. El value será de tipo <?php echo $fila['tipo']?></ul>
+    <ul>El formulario se procesará en modificar_tipo_ok.php. En este archivo, se recoge la variable que pasa por formulario y se ejecuta la consulta update (ojo que necesitas también el codigo/clave primaria de este registro... pista... input type="hidden"...)</ul>
+    <ul>Por último, se se hace una redirección a tipos.php</ul>
     
     <footer class="site-footer">
         <span class="site-footer-owner"><a href="https://github.com/mariluzsolvam/bbdd">Base de Datos</a> is maintained by <a href="https://github.com/mariluzsolvam">mariluzsolvam</a>.</span>
