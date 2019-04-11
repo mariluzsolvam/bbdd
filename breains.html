@@ -26,12 +26,14 @@
 
 </section>
 <h1>Proyecto BREAINS</h1>
-<h3>Diseño de la base de datos</h3>
+
+      <h3>Diseño de la base de datos</h3>
 <p>Abre tu panel de control para crear la siguiente base de datos en el servidor con cotejamiento <b>UTF-8.</b></p>
 <p>Abre phpmyadmin y crea cada tabla con cotejamiento <b>UTF-8.</b></p>
 <p>Todos los campos Varchar los tienes que crear con cotejamiento <b>UTF-8.</b> Cuando lo tengas creado, comprueba una vez más que está en UTF-8 y rellena las tablas.</p>
 <p><img src="img/diseñoBD.PNG" alt="base de datos" width="450"></p>
-<h3>Conexión en php con la base de datos</h3>
+
+      <h3>Conexión en php con la base de datos</h3>
       <p>Primero haremos una carpeta <i>breains</i> en Filezilla y en local para ir guardando los archivos necesarios de nuestro proyecto.</p>
       <p>1. Creamos una carpeta dentro de breains llamada <i>includes</i> donde guardaremos el archivo <b>datos_conexion.php</b> que vamos a crear ahora.</p>
       <p>NOTA: datos_conexion.php contien 4 variables con el valor de tu servidor, usuario, contraseña y base de datos. Estos datos los utilizaremos posteriormente en conexion.php para crear la conexion con la base de datos.</p>
@@ -50,15 +52,18 @@
       </p>
     <iframe width="560" height="315" src="https://www.youtube.com/embed/N56fKfAbtVA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     <p>Crea los archivos tipos.php, modelos.php y productos.php según la explicación anterior.</p>  
+  
     <h3>index.php y menu.php</h3>
     <p>Ahora vamos a crear un index.php y un menu.php que aparecza en cada página de las que hemos creado anteriormente:</p>
     <iframe width="560" height="315" src="https://www.youtube.com/embed/AcVbY6CbbGs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    
     <h3>Eliminar un registro de la tabla. PRIMERA PARTE</h3>
     <p>Creamos en tipos.php dos columnas más Editar y Eliminar fuera del bucle.</p>
     <p>Dentro del bucle, creamos dos celdas más "Editar" y "Eliminar" que nos lleven respectivamente a editar_tipo.php y eliminar_tipo.php</p>
     <p>La url de ambas opciones debe llevar una variable con el valor de la clave primaria de dicho registro.</p>
     <p>Cuando cliques en el enlace de "Eliminar" fíjate que en la URL haya pasado una variable (codigo) con un valor.</p>
     <iframe width="560" height="315" src="https://www.youtube.com/embed/69ADMp31YQU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+   
     <h3>Eliminar un registro de la tabla. SEGUNDA PARTE</h3>
     <p>Inserta dos o tres registros de prueba en la tabla tipos. Esto lo hacemos para no eliminar datos que necesitamos y que están relacionado con la tabla modelos y no se van a poder eliminar por estar la restricción de la clave ajena en RESTRICT.</p>
     <p>Crea el archivo eliminr_tipos.php. Realiza las siguientes acciones:</p>
@@ -67,6 +72,7 @@
     <ol>Ejecuta la query DELETE FROM tipos WHERE codigo='$codigo_tipo' ATENCIÓN: codigo en la query es el nombre del campo de la tabla tipos.</ol>
     <ol>Haz una redirección a tipos.php</ol>
     <iframe width="560" height="315" src="https://www.youtube.com/embed/cFH7m38pUMU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+   
     <h3>Insertar un registro de la tabla tipos</h3>
     <p>Para insertar un registro en la tabla ripos, realiza las siguientes acciones:</p>
     <p>En tipos.php crea un formulario con los campos "codigo" y "tipo" que se procese en insertar_tipo.php</p>
@@ -76,6 +82,13 @@
     <ol>Ejecuta la query</ol>
     <ol>Haz una redirección a tipos.php</ol>
     <iframe width="560" height="315" src="https://www.youtube.com/embed/3Pudsf47ezM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    
+      <h3>Insertar un registro con claves ajenas</h3>
+    <p>Vamos a insertar un registro en la tabla modelos. Esta tabla tiene el campo codigo_tipo que hace referencia a un código de la tabla tipos.</p>
+    <p>en el formulario de inserción, cambiaremos el cuadro de texto de codigo_tipo por un select con opciones.</p>
+    <p>Después del select, haremos una SQL para seleccionar todos los códigos de la tabla tipos y en el bucle que recorre esa consulta, pondremos la etiqueta <option> del select, así saldrán tantas opciones como códigos haya en la tabla tipos.</p>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/qvVV9_id_QU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    
     <footer class="site-footer">
         <span class="site-footer-owner"><a href="https://github.com/mariluzsolvam/bbdd">Base de Datos</a> is maintained by <a href="https://github.com/mariluzsolvam">mariluzsolvam</a>.</span>
 
