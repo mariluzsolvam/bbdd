@@ -111,19 +111,21 @@
       <p>Si es así, recoge esa variable y ejecutas la consulta de todos los articulos WHERE categoria= a la variable recogida.</p>
       <p>si no, la consulta se queda tal y como estaba.</p>
       <iframe width="560" height="315" src="https://www.youtube.com/embed/jLlss434AdY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-      <!--
+      
  <h4>WIDGET Post Populares de blog.php</h4>
      <p>Para visualizar el listado de los articulos más populares en su widget, tienes que proceder de la misma forma que con el widget de categorias.</p>
       <p>Localiza el widget en el HTML.</p>
       <p>Abre php, haz la query que seleccione los 3 artículos más populares, pon el while y 
 dentro solo un <strong>li</strong> con el href que apunte a blog.php?articulo=$fila...o como lo vayas a llamar.</p>
-<p>FECHA EN FORMATO CORRECTO</p>
-      
+<p><strong><FECHA EN FORMATO CORRECTO</strong></p>
+    <p>Para visualizar la fecha en formato correcto, utiliza la función strtotime de php para pasar de string a time. 
+Después, donde tengas que mostrar la fecha, aplica la función date de php cuyo primer parámetro es el formato 
+(d=dia, m=mes y Y=año en 4 dígutos) y segundo parámetro es la fecha a formatear. </p>  
  <h4>WIDGET Ultimos posts de pie.php</h4>
      <p>Para visualizar el listado de los articulos más recientes en su widget del pie.php, tienes que proceder de la misma forma que con el widget de categorias y posts populares.</p>
       <p>Localiza el widget en el HTML.</p>
       <p>Abre php, haz la query que seleccione los 4 artículos más recientes, pon el while y dentro solo un <strong>li</strong> con el href igual que has puesto en el widget de post populares.</p>
-      
+   <!--   
 
 <p>Crear conexión php.</p>
 <p>Abre un editor HTML, por ejemplo Brackets, Geany...</p>
