@@ -127,7 +127,14 @@ Después, donde tengas que mostrar la fecha, aplica la función date de php cuyo
      <p>Para visualizar el listado de los articulos más recientes en su widget del pie.php, tienes que proceder de la misma forma que con el widget de categorias y posts populares.</p>
       <p>Localiza el widget en el HTML.</p>
       <p>Abre php, haz la query que seleccione los 4 artículos más recientes, pon el while y dentro solo un <strong>li</strong> con el href igual que has puesto en el widget de post populares.</p>
-   <!--   
+  
+      <h3>Visitas de un artículo</h3>
+      <p>Ahora, cada vez que se clica en un artículo se debería ver este solamente. 
+        Para ello, mira el href de "Mas información" del artículo, este tiene que ser exactamente igual que el de "Post Populares", es decir,
+        que vaya a blog.php y le pasas la variable "articulo" con la clave primaria.
+      </p>
+      
+      <!--   
 
 <p>Crear conexión php.</p>
 <p>Abre un editor HTML, por ejemplo Brackets, Geany...</p>
